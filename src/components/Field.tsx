@@ -13,7 +13,7 @@ export default function Field({ objKey, value, setFn, error }: FieldProps) {
     <div className={styles.inputContainer}>
       <label>{titles[objKey]}</label>
       <input
-        className={cn(styles.input, "main-dropDown-dropDown")}
+        className={cn(styles.input, styles.field, "main-dropDown-dropDown")}
         type="text"
         value={error ?? value ?? ""}
         onChange={(e) => setFn(objKey, e.target.value)}
@@ -33,7 +33,7 @@ export function SimpleField({ value, label, setValue }: SimpleFieldProps) {
     <div className={styles.inputContainer}>
       <label>{label}</label>
       <input
-        className={cn(styles.input, "main-dropDown-dropDown")}
+        className={cn(styles.input, styles.field, "main-dropDown-dropDown")}
         type="text"
         value={value ?? ""}
         onChange={(e) => setValue(e.target.value)}
@@ -52,7 +52,12 @@ export function StaticField({ value, label }: StaticFieldProps) {
     <div className={styles.inputContainer}>
       <label>{label}</label>
       <input
-        className={cn(styles.input, "main-dropDown-dropDown")}
+        className={cn(
+          styles.input,
+          styles.field,
+          styles.staticField,
+          "main-dropDown-dropDown"
+        )}
         type="text"
         value={value ?? ""}
         readOnly
