@@ -174,7 +174,7 @@ export default function SettingsModal({ config }: SettingsModalProps) {
       />
       <span className={styles.subtitle}>
         Note: After changing back to Unset, you still need to reset the color
-        inside LedFX dashboard!
+        inside LedFx dashboard!
       </span>
       <div className={styles.saveButtons}>
         <Spicetify.ReactComponent.ButtonPrimary
