@@ -1,0 +1,11 @@
+{
+  "name": "LedFx Color Sync",
+  "description": "A Spicetify extension that syncs your music's colors to LedFx lights!",
+  "preview": "icon.png",
+  "main": "dist/ledfx-color-sync.js",
+  "readme": "README.md",
+  "authors": [
+    { "name": "shadow_aya", "url": "https://github.com/ShadowAya" }
+  ],
+  "tags": ["ledfx", "leds", "colors"]
+}
