@@ -1,0 +1,96 @@
+.input {
+  background-color: var(--spice-highlight-elevated) !important;
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+
+  & label {
+    width: 30%;
+    max-width: 30%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.colorDisplay {
+  display: flex;
+  gap: 20px;
+  padding: 0 5px;
+  & > div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    outline: 1px solid white;
+    outline-offset: 2px;
+  }
+}
+
+.toggle {
+  display: flex;
+  gap: 10px;
+  padding: 0 5px;
+  align-items: center;
+
+  & > label {
+    display: flex;
+    align-items: center;
+  }
+
+  & > input[type="checkbox"] {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--spice-button, #292a2e);
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    background-color: color-mix(
+      in srgb,
+      var(--spice-button, #292a2e) 20%,
+      transparent
+    );
+
+    &:checked {
+      border-color: var(--spice-button-active, #3f4146);
+      background-color: color-mix(
+        in srgb,
+        var(--spice-button-active, #292a2e) 40%,
+        transparent
+      );
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        width: 10px;
+        height: 5px;
+        border-left: 2px solid var(--spice-button-active, #3f4146);
+        border-bottom: 2px solid var(--spice-button-active, #3f4146);
+      }
+    }
+  }
+}
+
+.subtitle {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+.saveButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
